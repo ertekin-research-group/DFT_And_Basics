@@ -1,0 +1,29 @@
+
+THEORY:
+
+1) Review the discussion of DFT and write a summary, in your own words, of the material that we discussed and make a list of any questions that you have that we will discuss next time. Try to understand the two Hohenberg-Kohn theorems and the Kohn-Sham approach. What are the two main assumptions in the Kohn-Sham approach?  
+
+2) We talked about how it is necessary to approximate the exchange-correlation potential in DFT. Common approximations are the LDA (local density approximation) and the GGA (generalized gradient approximation, of which there are many types including PBE). Why do you think these are are often referred to as “local” and ”semi-local” semilocal approaches, respectively? 
+
+3) We talked about one method - iterating through a self-consistency loop - to solve the Kohn-Sham equations. Another method that is implemented in VASP is “direct minimization“.  Look at the VASP wiki and see if you can understand the difference between these. The tag in the VASP INCAR file that controls the algorithm is IALGO.  You can look at the different options that are available here: https://cms.mpi.univie.ac.at/wiki/index.php/IALGO. 
+
+
+EXERCISES:
+
+This week we will learn how to calculate the band gap of silicon from DFT. 
+
+1) Follow the directions at https://cms.mpi.univie.ac.at/wiki/index.php/Si_bandstructure to calculate the band structure of silicon (use “Procedure 1”). The general approach always starts with first obtaining an optimized geometry that you are happy with. 
+
+Once you have an optimized geometry (remember you optimized the lattice constant of silicon last week, so be sure to use this optimal value), then there are two steps to calculating a band structure. These are: 
+
+a) converge an scf loop at the optimized geometry using a standard self-consistent run with a reasonable kpoint mesh.
+
+b) in the same directory where the CHGCAR file from the previous run is located, run a non-self consistent calculation (set ICHARG = 11 in INCAR). You also need to change your kpoints file.  See the example on the vasp wiki page. 
+
+c) Plot your results for the band structure. 
+
+2) By the way, what is the difference between a self-consistent and a non self-consistent run? 
+
+3) Why did you need to change the KPOINT file for the non self-consistent run?  The paper included in this directory shows good choices of paths in the Brillouin zone for all of the different Bravais lattices. 
+
+4) What did you get for DFT-PBE band gap of silicon?  How does it compare to other reported literature values for the DFT-PBE band gap of silicon? How does it compare to the experimental value of the band gap?  
