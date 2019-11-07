@@ -32,9 +32,11 @@ Get familiar with pandas, matplotlib, seaborn, and altair.
 
 What are reasonable parameters of ENCUT and KPOINTS to get converged total energies in silicon? 
 
-## Week 3: DFT & Prediction of silicon lattice constant, bulk modulus, and band gap. 
+## Week 3: DFT & Prediction of silicon lattice constant, bulk modulus. 
 
-## Week 4: Supercells and scaling tests.  
+## Week 4: DFT & Prediction of silicon band gap 
+
+## Week 5: Supercells and scaling tests.  
 
 Tasks: Get pymatgen working, and use it to generate a 2x2x2, 3x3x3, and 4x4x4 silicon supercell. 
 
